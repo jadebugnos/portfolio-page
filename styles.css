@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --ff: 'Times New Roman', Times, serif;
+    --color-primary1: rgb(66, 64, 64);
+    --color-primary2: white;
+    --color-accent: gray;
+    --color-text: #f5f5f5;
+    --h1: bold clamp(3rem, 5vw + 1rem, 5.5rem)/1.2 var(--ff);
+    --h2: bold clamp(2.5rem, 4vw + 0.5rem, 3.5rem)/1.5 var(--ff);
+    --h3: bold clamp(2rem, 3.5vw + 0.5rem, 3rem)/1.5 var(--ff);
+    --p: clamp(1rem, 2vw + 0.5rem, 1.5rem)/1.5 var(--ff);
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+}
+
+
+.navbar {
+    display:flex;
+    justify-content: right;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary1);
+    z-index: 10;
+}
+
+.navbar ul {
+    margin-right: var(--spacing-md);
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 16px 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    list-style: none;
+    margin: 0 15px;
+    color: white;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.navbar li:hover {
+    background-color: #000000;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg);
+    color: #f5f5f5;
+    align-items: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.welcome-section .welcome-texts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+h1 {
+    font: var(--h1);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+h2 {
+    font: var(--h2);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+h3 {
+    font: var(--h3);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+p {
+    font: var(--p);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.projects {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    background-color: #72707a;
+}
+
+.projects h2 {
+    margin: 50px auto;
+    color: var(--color-text);
+    text-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.projects .project-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 60px;
+}
+
+.projects .project-grid .cards {
+    text-decoration: none;
+    background: var(--color-primary1);
+    border-radius: 15px;
+    cursor: pointer;
+    height: clamp(200px, 50vh, 350px); /* Adjust the height responsively */
+    width: clamp(250px, 50vw, 500px);  /* Adjust the width responsively */
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.projects .project-grid a:hover {
+    transform: translate(0, -3%);
+    background: #f5f5f5;
+}
+
+.projects .project-grid a p:hover {
+    color: #000000;
+}
+
+.projects .project-grid .cards p {
+    color: var(--color-text);
+}
+
+
+.projects .project-grid .cards .project-img {
+    height: clamp(150px, 45vh, 300px);  /* Adjust the height responsively */
+    width: 100%;
+    border-radius: 10px;
+}
+
+.projects .project-action {
+    text-decoration: none;
+    color: var(--color-text);
+    cursor: pointer;
+    background-color: var(--color-primary1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.projects .project-action:hover {
+    color: var(--color-primary1);
+    background: var(--color-text);
+    transform: translate(0, -10%);
+}
+
+#Contacts {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    margin-top: 0;
+    background: #d8d8d8;
+    position: relative;
+}
+
+.contacts .social-menu ul{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.contacts .social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.contacts .social-menu ul li .fab{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3s;
+    color: #000;
+}
+
+.contacts .social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.contacts .social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.contacts .social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.contacts .social-menu ul li:nth-child(1) a:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.contacts .social-menu ul li:nth-child(2) a:hover{
+    background-color: #E4405F;
+}
+.contacts .social-menu ul li:nth-child(3) a:hover{
+    background-color: #0077b5;
+}
+.contacts .social-menu ul li:nth-child(4) a:hover{
+    background-color: #000;
+}
+
+footer {
+    height: auto;
+    background-color: var(--color-primary1);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;    
+}
+
+footer p {
+    font-size: 1.1em;
+    color: #f5f5f5;
+}
+
+.fcc {
+    margin-right: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects .project-grid {
+        grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    }
+}
